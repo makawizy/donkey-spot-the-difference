@@ -4,8 +4,9 @@
     <preference name="Fullscreen" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="android-windowSoftInputMode" value="adjustResize" />
+	<preference name="orientation" value="landscape" />
     <name>Spot The Difference</name>
-    <description> A sample Apache Cordova application that responds to the deviceready event.
+    <description> A game for kids to spot the difference between objects of two similar image. 
 </description>
 <icon src="icon.png" />
     <author email="dev@cordova.apache.org" href="http://cordova.io"> Apache Cordova Team
