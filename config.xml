@@ -11,6 +11,7 @@
 <icon src="icon.png" />
     <author email="dev@cordova.apache.org" href="http://cordova.io"> Apache Cordova Team
 </author>
+	<plugin name="cordova-plugin-dialogs" src="npm" />
     <content src="index.html" />
     <access origin="*" />
     <feature name="Notification">
