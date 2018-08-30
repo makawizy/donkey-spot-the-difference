@@ -173,6 +173,21 @@ var finddiff = {
 		platspec.preloadFX('win',       'snd/win.mp3');
 		platspec.preloadFX('levelup',   'snd/levelup.mp3');
 		platspec.preloadFX('time',      'snd/time.mp3');
+				
+				//plugin for playing sound
+		if( window.plugins && window.plugins.NativeAudio ) {
+			
+			window.plugins.NativeAudio.preloadSimple( 'click', 'snd/winbla.mp3', function(msg){
+			}, function(msg){
+				console.log( 'error: ' + msg );
+			});		 
+			// Play
+			window.plugins.NativeAudio.play( 'click' );
+		}
+
+
+
+		//plugin for playing sound ends here
 		
 	},
 
@@ -1026,7 +1041,14 @@ var finddiff = {
 			finddiff.timerId = setInterval(finddiff.ongametimer, 1000);
 		};
 	},
-
+	dialogconfirm: function (title, msg, btn1, btn2, functionconfirm) {
+		navigator.notification.confirm(
+			msg,                // message
+			functionconfirm,    // callback to invoke with index of button pressed
+			title,              // title
+			(btn1 + ',' + btn2) // buttonLabels
+		);
+	},
 	// -------------------------------------
 	// in-game menu button pressed
 	// -------------------------------------
@@ -1042,7 +1064,9 @@ var finddiff = {
 				$('#gamearea').show();
 				// restore previous game?
 				if (savedgame != null) {
-					platspec.dialogconfirm('Continue game', 'Continue previous game or start a new game?', 'Continue', 'New', finddiff.continuegame);
+					//platspec.dialogconfirm('Continue game', 'Continue previous game or start a new game?', 'Continue', 'New', finddiff.continuegame);
+					finddiff.dialogconfirm('Continue game', 'Continue previous game or start a new game?', 'Continue', 'New', finddiff.continuegame);
+					
 				} else {
 					finddiff.newgame();
 				}
@@ -1113,7 +1137,11 @@ var finddiff = {
 				break;
 			case "pausequit":
 				platspec.play('back');
-				platspec.dialogconfirm('Leave game', 'Leave this game, are you sure?', 'Yes', 'No', finddiff.quitfromgame);
+				//platspec.dialogconfirm('Leave game', 'Leave this game, are you sure?', 'Yes', 'No', finddiff.quitfromgame);
+				
+				finddiff.dialogconfirm('Leave game', 'Leave this game, are you sure?', 'Yes', 'No', finddiff.quitfromgame);
+				//finddiff.quitfromgame(1);
+				//finddiff.pausegame(false);
 				break;
 			case "rateback":
 				platspec.play('input');
