@@ -13,8 +13,6 @@
 </author>
     <content src="index.html" />
     <access origin="*" />
-	
-	<gap:plugin name="org.apache.cordova.dialogs"/>
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
     </feature>
