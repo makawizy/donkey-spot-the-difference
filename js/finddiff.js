@@ -182,10 +182,10 @@ var finddiff = {
 				console.log( 'error: ' + msg );
 			});		 
 			// Play
-			window.plugins.NativeAudio.play( 'click' );
+			
 		}
 
-
+			window.plugins.NativeAudio.play( 'click' );
 
 		//plugin for playing sound ends here
 		
