@@ -12,6 +12,7 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io"> Apache Cordova Team
 </author>
 	<plugin name="cordova-plugin-dialogs" src="npm" spec="2.0.1" />
+	<plugin name="cordova-plugin-nativeaudio" src="npm" spec="3.0.9" />
     <content src="index.html" />
     <access origin="*" />
     <feature name="Notification">
