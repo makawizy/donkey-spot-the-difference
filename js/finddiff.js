@@ -176,20 +176,43 @@ var finddiff = {
 				
 				//plugin for playing sound
 		if( window.plugins && window.plugins.NativeAudio ) {
-			
-			window.plugins.NativeAudio.preloadSimple( 'click', 'snd/winbla.mp3', function(msg){
-			}, function(msg){
-				console.log( 'error: ' + msg );
-			});		 
-			// Play
-			
-		}
 
-			window.plugins.NativeAudio.play( 'click' );
+            var items = ['input', 'forward', 'back', 'correct'];
+            for(var i=0; i<items.length; i++) {
+                var asset = 'snd/' + items[i] + '.mp3';
+                window.plugins.NativeAudio.preloadSimple(items[i], 
+                                                         asset, 
+                                                         function(msg){console.info(msg)}, 
+                                                         function(msg){ console.error( 'Error: ' + msg ); });
+            }
+
+            window.plugins.NativeAudio.preloadComplex('lose', 
+                                                      'snd/lose.mp3', 
+                                                      1, // volume
+                                                      1, // voices
+                                                      0, // delay
+            function(msg) {
+                console.info(msg); 
+                window.plugins.NativeAudio.play('noise', 
+                                                function(msg){console.info(msg)}, 
+                                                function(msg){ console.error( 'Error: ' + msg ); }, 
+                                                function(msg){ console.error( 'Complete: ' + msg ); });
+            }, 
+                                                      function(msg){ alert( 'Error: ' + msg ); });
+
+        }
+
+
 
 		//plugin for playing sound ends here
 		
 	},
+	 play: function(drum) {
+        document.getElementById(drum).classList.add('touched');
+        window.plugins.NativeAudio.play(drum, 
+                                        function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
+                                        function(msg){ console.error( 'Error: ' + msg ); });
+    },
 
 	// -------------------------------------
 	// android back button
@@ -298,7 +321,7 @@ var finddiff = {
 		// switch to intro
 		finddiff.level = 0;
 		finddiff.score = 0;
-		
+		finddiff.play("lose");
 		if (finddiff.userrate == "") {
 			finddiff.hints = -1; // hints disabled
 		} else {
