@@ -321,7 +321,7 @@ var finddiff = {
 		// switch to intro
 		finddiff.level = 0;
 		finddiff.score = 0;
-		finddiff.play("lose");
+		
 		if (finddiff.userrate == "") {
 			finddiff.hints = -1; // hints disabled
 		} else {
