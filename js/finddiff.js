@@ -163,7 +163,7 @@ var finddiff = {
 	// preload media files 
 	// -------------------------------------
 	preload: function () {
-		platspec.preloadFX('input',     'snd/input.mp3');
+		/*platspec.preloadFX('input',     'snd/input.mp3');
 		platspec.preloadFX('forward',   'snd/forward.mp3');
 		platspec.preloadFX('back',      'snd/back.mp3');
 
@@ -172,12 +172,12 @@ var finddiff = {
 		platspec.preloadFX('lose',      'snd/lose.mp3');
 		platspec.preloadFX('win',       'snd/win.mp3');
 		platspec.preloadFX('levelup',   'snd/levelup.mp3');
-		platspec.preloadFX('time',      'snd/time.mp3');
+		platspec.preloadFX('time',      'snd/time.mp3'); */
 				
 				//plugin for playing sound
 		if( window.plugins && window.plugins.NativeAudio ) {
 
-            var items = ['input', 'forward', 'back', 'correct'];
+            var items = ['input', 'forward', 'back', 'correct','incorrect','lose','win','levelup','time'];
             for(var i=0; i<items.length; i++) {
                 var asset = 'snd/' + items[i] + '.mp3';
                 window.plugins.NativeAudio.preloadSimple(items[i], 
@@ -218,7 +218,7 @@ var finddiff = {
 	// android back button
 	// -------------------------------------
 	onbackbutton: function () {
-			finddiff.play("input");
+			
 		if ($('#mainmenu').is(':visible'))   { navigator.app.exitApp() }; // quit app
 
 		if ($('#instructions').is(':visible')) { finddiff.ondiffbuttonpress('insok') };
@@ -553,7 +553,8 @@ var finddiff = {
 		// hide any message from previous game/level
 		$('.gamemessage').hide();
 		
-		platspec.play('levelup');
+		//platspec.play('levelup');
+		finddiff.play('levelup');
 		
 		// when restore game
 		if (savedgame != null) {
@@ -640,7 +641,8 @@ var finddiff = {
 						iRemain++;
 						if (iRemain == 0) {
 							// mark unfound differences
-							platspec.play('incorrect');
+							//platspec.play('incorrect');
+							finddiff.play('incorrect');
 							finddiff.markdifference(i, 0); // 0=not found
 						};
 					};
@@ -678,7 +680,8 @@ var finddiff = {
 				$('.gamemessage .diffbutton:first').show();
 				$('.gamemessage .diffbutton:last').text('Restart!');
 				$('.gamemessage').show();
-				platspec.play('lose');
+				//platspec.play('lose');
+				finddiff.play('lose');
 				break;
 		};
 	},
@@ -702,7 +705,8 @@ var finddiff = {
 
 		// sound effect when passing 15-seconds-left threshold
 		if ( (finddiff.timeleft <= 15) && (finddiff.timeleft+countsec > 15) ) {
-			platspec.play('time');
+			//platspec.play('time');
+			finddiff.play('time');
 		}
 	},
 
@@ -790,7 +794,8 @@ var finddiff = {
 				// center position within canvas (without offset pos within document)
 				xscr = xscr - pos.x;
 				yscr = yscr - pos.y;
-				platspec.play('incorrect');
+				//platspec.play('incorrect');
+				finddiff.play('incorrect');
 				finddiff.animateicon(xscr, yscr, 'incorrecticon');
 				finddiff.animateicon(xscr, yscr, 'penaltyicon');
 				// incorrect guess; 10 penalty seconds
@@ -845,11 +850,13 @@ var finddiff = {
 			finddiff.oncorrectguess();				
 		} else if (finddiff.hints == 0) {
 			// no more hints available
-			platspec.play('incorrect');
+			//platspec.play('incorrect');
+			finddiff.play('incorrect');
 		} else {
 			// user has not rated this app yet
 			// pause game and show "enable hints" panel
-			platspec.play('input');
+			//platspec.play('input');
+			finddiff.play('input');
 			finddiff.rategame(true);
 		};
 	},
@@ -938,7 +945,8 @@ var finddiff = {
 	oncorrectguess: function() {
 
 		// sound and animation
-		platspec.play('correct');
+		//platspec.play('correct');
+		finddiff.play('correct');
 				
 		// add coin
 		$('#diffsfound .diffscoin0:first').removeClass("diffscoin0").addClass("diffscoin1");
@@ -960,7 +968,8 @@ var finddiff = {
 			finddiff.ongametimer(); // go immediately, don't wait for timer
 			// level win sound effect, short delay to wait for last 'correct' sound effect to finish
 			setTimeout(function() {
-				platspec.play('win');
+				//platspec.play('win');
+				finddiff.play('win');
 			}, 250);
 		};
 	},
@@ -1083,7 +1092,8 @@ var finddiff = {
 			case "mmsta": // game start
 				// load any previous game
 				finddiff.loadgame();
-				platspec.play('forward');
+				//platspec.play('forward');
+				finddiff.play('forward');
 				$('#menuarea').hide();
 				$('#gamearea').show();
 				// restore previous game?
@@ -1096,35 +1106,43 @@ var finddiff = {
 				}
 				break;
 			case "mmins": // instructions
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('instructions');
 				break;
 			case "mmhis": // highscores
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('highscores');
 				break;
 			case "mminf": // about screen
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('aboutmenu');
 				break;
 			case "insok": // from instructions back to main menu
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('mainmenu');
 				break;
 			case "hisok": // from highscores back to main menu
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('mainmenu');
 				break;
 			case "infok": // from about back to main menu
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('mainmenu');
 				break;
 			case "dbgok": // from about back to main menu
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.menudisplay('mainmenu');
 				break;
 			case "gameok":
-				platspec.play('forward');
+				//platspec.play('forward');
+				finddiff.play('forward');
 				if (finddiff.state == STATE_LEVELWIN) {
 					finddiff.nextlevel();
 				} else if (finddiff.state == STATE_ENTERNAME) {
@@ -1139,7 +1157,8 @@ var finddiff = {
 				};
 				break;
 			case "gameback":
-				platspec.play('back');
+				//platspec.play('back');
+				finddiff.play('back');
 				finddiff.quitfromgame(1);
 				break;
 			case "hintbtn":
@@ -1151,12 +1170,14 @@ var finddiff = {
 			case "pausebtn":
 				// can only pause while playing
 				if (finddiff.state <= STATE_PLAYING) { // playying or level start
-					platspec.play('input');
+					//platspec.play('input');
+					finddiff.play('input');
 					finddiff.pausegame(true);
 				};
 				break;
 			case "pausecont":
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.pausegame(false);
 				break;
 			case "pausequit":
@@ -1168,11 +1189,13 @@ var finddiff = {
 				//finddiff.pausegame(false);
 				break;
 			case "rateback":
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.rategame(false);
 				break;
 			case "rateok":
-				platspec.play('forward');
+				//platspec.play('forward');
+				finddiff.play('forward');
 
 				// YES! user rates app, remember this!
 				window.localStorage.setItem("finddiff_userrate", VERSION_NUMBER);
@@ -1205,19 +1228,23 @@ var finddiff = {
 		switch (id)
 		{
 			case "dbgprev": // next
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.gotophotoindex((nextindex-1));
 				break;
 			case "dbgnext": // next
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.gotophotoindex((nextindex+1));
 				break;
 			case "dbgcheat": // next
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.debugcheat = !finddiff.debugcheat;
 				break;
 			case "dbgorder": // next
-				platspec.play('input');
+				//platspec.play('input');
+				finddiff.play('input');
 				finddiff.debugorder = !finddiff.debugorder;
 				finddiff.shufflephotoorder(nextindex);
 				break;
@@ -1286,7 +1313,8 @@ var finddiff = {
 			// check if secret code
 			if (this.secretcode == "TBTTBB") {
 				this.secretcode = "";
-				platspec.play('levelup'); // platspec.play('correct')
+				//platspec.play('levelup'); 
+				finddiff.play('levelup'); // platspec.play('correct')
 				finddiff.menudisplay('debugmenu');
 			};
 		};
