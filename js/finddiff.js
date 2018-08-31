@@ -208,7 +208,7 @@ var finddiff = {
 		
 	},
 	 play: function(drum) {
-        document.getElementById(drum).classList.add('touched');
+        //document.getElementById(drum).classList.add('touched');
         window.plugins.NativeAudio.play(drum, 
                                         function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
                                         function(msg){ console.error( 'Error: ' + msg ); });
@@ -218,6 +218,7 @@ var finddiff = {
 	// android back button
 	// -------------------------------------
 	onbackbutton: function () {
+			finddiff.play("input");
 		if ($('#mainmenu').is(':visible'))   { navigator.app.exitApp() }; // quit app
 
 		if ($('#instructions').is(':visible')) { finddiff.ondiffbuttonpress('insok') };
