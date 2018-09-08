@@ -127,10 +127,16 @@ body, html {
 	height: 100%;
 	margin-top:16px;
 }
+#logo div{
+	display:inline-block;
+	height: 200px;
+	height: 100%;
+	margin-top:16px;
+}
 
 #mainmenu{
 	position:relative;
-	margin-top:48px;
+	margin-top:68px;
 }
 
 #mainmenuabout{
