@@ -1488,7 +1488,7 @@ var finddiff = {
 			"margin-top": (basesize/2)+"px"
 		});
 		$('#mainmenu').css({
-			"margin-top": (basesize*1.8)+"px"
+			"margin-top": (basesize*2)+"px"
 		});
 		$('#mainmenuabout').css({
 			"bottom":(basesize*0.5)+"px",
