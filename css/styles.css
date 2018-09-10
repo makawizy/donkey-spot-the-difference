@@ -336,6 +336,15 @@ body, html {
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 }
+.bdrlogo2{
+	width: 64px;
+	height: 64px;
+	line-height: height;
+	/* css sprite sheet */
+	background-image: url(../img/icons_logo.png);
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+}
 
 .levelindicator{
 	background-color: #03899c;
