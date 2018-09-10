@@ -328,8 +328,6 @@ body, html {
 .bdrlogo{
 	width: 64px;
 	height: 64px;
-	line-height: height;
-
 	/* css sprite sheet */
 	background-image: url(../img/icons.png);
 	background-size: 200% 200%;
