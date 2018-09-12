@@ -31,6 +31,7 @@ var STATE_LEVELWIN = 3;
 var STATE_GAMEEND = 4;
 var STATE_ENTERNAME = 5;
 var STATE_GAMEOVER = 6;
+var STATE_GAMECOMPLETED = 7
 
 var savedgame = null;
 
@@ -476,12 +477,12 @@ var finddiff = {
 		}else{
 			//game over and enter name to save highest score
 		// highscore enter name
-					$('.gamemessage h1').text('YOU HAVE REACHED THE END OF THE GAME!!');
+					$('.gamemessage h1').text('Enter name for highest scores!!');
 					finddiff.mostrecentname = $('#nameinput').val();
 					finddiff.hiscoreinsert();
 					// go to game over part
 					
-					finddiff.state = STATE_ENTERNAME;
+					finddiff.state = STATE_GAMECOMPLETED;
 					finddiff.ongametimer();
 		}
 	
@@ -675,7 +676,7 @@ var finddiff = {
 				break;
 			case STATE_GAMEOVER:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').text('Time up, game over!');
+				$('.gamemessage h1').text('Game Over!');
 				$('#nameinput').hide();
 				$('.gamemessage .diffbutton:first').show();
 				$('.gamemessage .diffbutton:last').text('Restart!');
@@ -683,6 +684,20 @@ var finddiff = {
 				//platspec.play('lose');
 				finddiff.play('lose');
 				break;
+			case STATE_GAMECOMPLETED:
+				clearInterval(finddiff.timerId);
+				$('.gamemessage h1').text('CONGRATULATION YOU HAVE REACHED THE END OF THE GAME, ENTER YOUR NAME FOR HIGHEST SCORES!');
+				$('#nameinput').val(finddiff.mostrecentname);
+				$('#nameinput').show();
+				$('.gamemessage .diffbutton:first').hide();
+				$('.gamemessage .diffbutton:last').text('Ok');
+				$('.gamemessage').show();
+				$('#nameinput').focus();
+				//platspec.play('lose');
+				finddiff.play('win');
+				//finddiff.ongametimer(); // go immediately, don't wait for timer
+				break;
+				
 		};
 	},
 
@@ -1146,6 +1161,13 @@ var finddiff = {
 				if (finddiff.state == STATE_LEVELWIN) {
 					finddiff.nextlevel();
 				} else if (finddiff.state == STATE_ENTERNAME) {
+					// highscore enter name
+					finddiff.mostrecentname = $('#nameinput').val();
+					finddiff.hiscoreinsert();
+					// go to game over part
+					finddiff.state = STATE_GAMEOVER;
+					finddiff.ongametimer();
+				}else if(finddiff.state == STATE_GAMECOMPLETED){
 					// highscore enter name
 					finddiff.mostrecentname = $('#nameinput').val();
 					finddiff.hiscoreinsert();
