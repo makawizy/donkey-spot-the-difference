@@ -13,18 +13,7 @@ var photodata = [
 			{x: 405, y: 44, w: 83, h: 101}
 		]
 	},
-	{
-		fileorg: "p2_org.jpg",
-		fileedit: "p2_edit.jpg",
-		location: "Groningen, The Netherlands",
-		date: "2014-03-29",
-		caption: "Flower Stand, Vismarkt",
-		photoby: "Bas de Reuver",
-		geoloc: "53.2172917,6.5642747",
-		differences: [
-			{x: 123, y: 440, w: 24, w: 31}
-		]
-	},
+	
 	{
 		fileorg: "p3_org.jpg",
 		fileedit: "p3_edit.jpg",
