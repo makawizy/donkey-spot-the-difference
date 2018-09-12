@@ -681,7 +681,7 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').text('CONGRATULATION YOU HAVE REACHED THE END OF THE GAME, ENTER YOUR NAME FOR HIGHEST SCORES!');
+				$('.gamemessage h1').text('CONGRATULATION YOU HAVE REACHED THE END OF THE GAME!');
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
 				$('.gamemessage .diffbutton:first').hide();
