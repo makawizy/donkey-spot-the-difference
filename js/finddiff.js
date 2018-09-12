@@ -418,7 +418,7 @@ var finddiff = {
 	nextlevel: function () {
 		// reset variables
 		finddiff.level++;
-		if(finddiff.level < 63){
+		if(finddiff.level < photodata.length){
 				// next photo in random order
 		finddiff.orderindex = parseInt((finddiff.orderindex+1) % photodata.length);
 		finddiff.photoindex = finddiff.photoorder[finddiff.orderindex];
