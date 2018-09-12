@@ -418,7 +418,7 @@ var finddiff = {
 	nextlevel: function () {
 		// reset variables
 		finddiff.level++;
-		if(finddiff.level <= 63){
+		if(finddiff.level < 63){
 				// next photo in random order
 		finddiff.orderindex = parseInt((finddiff.orderindex+1) % photodata.length);
 		finddiff.photoindex = finddiff.photoorder[finddiff.orderindex];
@@ -477,11 +477,6 @@ var finddiff = {
 		}else{
 			//game over and enter name to save highest score
 		// highscore enter name
-					$('.gamemessage h1').text('Enter name for highest scores!!');
-					finddiff.mostrecentname = $('#nameinput').val();
-					finddiff.hiscoreinsert();
-					// go to game over part
-					
 					finddiff.state = STATE_GAMECOMPLETED;
 					finddiff.ongametimer();
 		}
