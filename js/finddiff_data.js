@@ -58,7 +58,7 @@ var photodata = [
 		photoby: "Bas de Reuver",
 		geoloc: "53.2517467,6.5880505",
 		differences: [
-			{x: 260, y: 343, w: 66, h: 75}
+			{x: 282, y: 257, w: 32, h: 126}
 		]
 	},
 	{
