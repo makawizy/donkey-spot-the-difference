@@ -9,6 +9,8 @@
     <description> A game for kids to spot the difference between objects of two similar image. 
 </description>
 	   <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
+		<preference name="SplashScreen" value="splash" />
+		<preference name="SplashScreenDelay" value="50000" />
 <icon src="icon.png" />
 	<platform name="android">
 	<icon qualifier="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
