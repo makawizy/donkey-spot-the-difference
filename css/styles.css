@@ -335,11 +335,10 @@ body, html {
 	background-position: 0 100%;
 }
 .bdrlogo2{
-	width: 64px;
-	height: 64px;
+	width: 100px;
+	height: 100px;
 	line-height: height;
 	/* css sprite sheet */
-	background-image: url(../img/icons_logo.png);
 }
 
 .levelindicator{
