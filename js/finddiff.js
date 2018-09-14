@@ -622,6 +622,7 @@ var finddiff = {
 				break;
 			case STATE_LEVELWIN:
 				clearInterval(finddiff.timerId);
+				$('.gamemessage h1').style.fontSize = "35px";
 				$('.gamemessage h1').text('Level completed!');
 				$('#nameinput').hide();
 				$('.gamemessage .diffbutton:first').hide();
@@ -660,6 +661,7 @@ var finddiff = {
 				break;
 			case STATE_ENTERNAME:
 				clearInterval(finddiff.timerId);
+				$('.gamemessage h1').style.fontSize = "35px";
 				$('.gamemessage h1').text('New highscore!');
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
@@ -681,6 +683,7 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
+				$('.gamemessage h1').style.fontSize = "20px";
 				$('.gamemessage h1').text('Congratulations! Game Finished, Updates coming soon...');
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
