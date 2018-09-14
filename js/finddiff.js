@@ -199,7 +199,8 @@ var finddiff = {
                                                 function(msg){ console.error( 'Error: ' + msg ); }, 
                                                 function(msg){ console.error( 'Complete: ' + msg ); });
             }, 
-                                                      function(msg){  });
+                                                      function(msg){ //alert( 'Error: ' + msg ); 
+	    						});
 
         }
 
@@ -622,11 +623,13 @@ var finddiff = {
 				break;
 			case STATE_LEVELWIN:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').style.fontSize = "35px";
 				$('.gamemessage h1').text('Level completed!');
 				$('#nameinput').hide();
+				$('.gamemessage h3').hide();
+				$('.gamemessage h1').show();
 				$('.gamemessage .diffbutton:first').hide();
 				$('.gamemessage .diffbutton:last').text('next level!');
+				
 				$('.gamemessage').show();
 				break;
 			case STATE_GAMEEND: // game outro
@@ -661,8 +664,9 @@ var finddiff = {
 				break;
 			case STATE_ENTERNAME:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').style.fontSize = "35px";
 				$('.gamemessage h1').text('New highscore!');
+				$('.gamemessage h3').hide();
+				$('.gamemessage h1').show();
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
 				$('.gamemessage .diffbutton:first').hide();
@@ -674,6 +678,8 @@ var finddiff = {
 			case STATE_GAMEOVER:
 				clearInterval(finddiff.timerId);
 				$('.gamemessage h1').text('Game Over!');
+				$('.gamemessage h3').hide();
+				$('.gamemessage h1').show();
 				$('#nameinput').hide();
 				$('.gamemessage .diffbutton:first').show();
 				$('.gamemessage .diffbutton:last').text('Restart!');
@@ -683,8 +689,9 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').style.fontSize = "20px";
-				$('.gamemessage h1').text('Congratulations! Game Finished, Updates coming soon...');
+				$('.gamemessage h3').text('Congratulations! Game Finished, Updates coming soon...');
+				$('.gamemessage h1').hide();
+				$('.gamemessage h3').show();
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
 				$('.gamemessage .diffbutton:first').hide();
