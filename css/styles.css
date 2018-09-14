@@ -326,8 +326,8 @@ body, html {
 .penaltyicon  { background-position: 100% 66.66%;}
 
 .bdrlogo{
-	width: 64px;
-	height: 64px;
+	width: 84px;
+	height: 84px;
 	/* css sprite sheet */
 	background-image: url(../img/icons.png);
 	background-size: 200% 200%;
