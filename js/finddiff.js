@@ -199,7 +199,7 @@ var finddiff = {
                                                 function(msg){ console.error( 'Error: ' + msg ); }, 
                                                 function(msg){ console.error( 'Complete: ' + msg ); });
             }, 
-                                                      function(msg){ alert( 'Error: ' + msg ); });
+                                                      function(msg){  });
 
         }
 
