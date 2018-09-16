@@ -12,6 +12,7 @@
 	   <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 		<preference name="SplashScreen" value="splash" />
 		<preference name="SplashScreenDelay" value="10000" />
+		<preference name="AutoHideSplashScreen" value="false" />
 	`	
 	
 <icon src="icon.png" />
