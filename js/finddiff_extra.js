@@ -122,5 +122,6 @@ var platspec = {
 
 // on page finished loading
 document.addEventListener("deviceready", function() {
+	navigator.splashscreen.hide();
 	finddiff.appinit();
 }, false)
