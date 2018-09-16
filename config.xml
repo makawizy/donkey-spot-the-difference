@@ -5,6 +5,7 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="android-windowSoftInputMode" value="adjustResize" />
 	<preference name="orientation" value="landscape" />
+	<preference name="BackgroundColor" value="#ffffff" />
     <name>Spot The Difference</name>
     <description> A game for kids to spot the difference between objects of two similar image. 
 </description>
