@@ -10,7 +10,6 @@
     <description> A game for kids to spot the difference between objects of two similar image. 
 </description>
 	   <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
-	<plugin name="cordova-plugin-splashscreen-background-color" source="npm" spec="1.4.0" />
 		<preference name="SplashScreen" value="splash" />
 		<preference name="SplashScreenDelay" value="10000" />
 	`	
