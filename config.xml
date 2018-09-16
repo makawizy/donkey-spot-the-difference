@@ -10,7 +10,7 @@
 </description>
 	   <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
 		<preference name="SplashScreen" value="splash" />
-		<preference name="SplashScreenDelay" value="5000" />
+		<preference name="SplashScreenDelay" value="10000" />
 <icon src="icon.png" />
 	<platform name="android">
 	<icon qualifier="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
