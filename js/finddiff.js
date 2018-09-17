@@ -550,6 +550,7 @@ var finddiff = {
 		$('#diffsfound > div ').removeClass("diffscoin1").addClass("diffscoin0");
 		// hide any message from previous game/level
 		$('.gamemessage').hide();
+		$('.gamemessageend').hide();
 		
 		//platspec.play('levelup');
 		finddiff.play('levelup');
@@ -1536,7 +1537,14 @@ var finddiff = {
 		});
 		$('.gamemessage input').css({
 			"font-size": basesize+"px"
-		});			
+		});
+		// in-game message
+		$('.gamemessageend').css({
+			"padding-bottom": basesize+"px"
+		});
+		$('.gamemessageend input').css({
+			"font-size": basesize+"px"
+		});
 	},
 	
 	// -------------------------------------
