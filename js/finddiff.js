@@ -700,8 +700,8 @@ var finddiff = {
 				$('.gamemessageend h3').show();
 				$('#gamemessageendnameinput').val(finddiff.mostrecentname);
 				$('#gamemessageendnameinput').show();
-				$('.gamemessageend .diffbutton:first').hide();
-				$('.gamemessageend .diffbutton:last').text('Ok');
+				$('.gamemessageend .diffbuttonend:first').hide();
+				$('.gamemessageend .diffbuttonend:last').text('Ok');
 				$('.gamemessageend').show();
 				$('#gamemessageendnameinput').focus();
 				//platspec.play('lose');
