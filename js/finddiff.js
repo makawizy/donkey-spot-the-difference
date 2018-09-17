@@ -1185,6 +1185,7 @@ var finddiff = {
 					finddiff.mostrecentname = $('#gamemessageend').val();
 					finddiff.hiscoreinsert();
 					// go to game over part
+					$('.gamemessageend').hide();
 					finddiff.state = STATE_GAMEOVER;
 					finddiff.ongametimer();
 				} else {
