@@ -1,13 +1,3 @@
-html, body {
-  height: 100%;
-}
-
-body {
-  background: black;
-  min-height: 100%;
-  overflow: hidden;
-}
-.displaynone {display: none;}
 
 @-webkit-keyframes move {
   100% {
