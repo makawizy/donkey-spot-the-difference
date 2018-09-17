@@ -694,9 +694,9 @@ var finddiff = {
 				$('.gamemessageend h1').text('Congratulations!!!');
 				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
 				$('.gamemessageend h1').show();
-				 //var text = new ShuffleText(document.querySelector('#messageend_h1'));
-  				 //text.start();
-				applyBounce();
+				 var text = new ShuffleText(document.querySelector('#messageend_h1'));
+  				 text.start();
+				//applyBounce();
 				$('.gamemessageend h3').show();
 				$('#gamemessageendnameinput').val(finddiff.mostrecentname);
 				$('#gamemessageendnameinput').show();
