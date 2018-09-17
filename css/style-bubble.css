@@ -15,7 +15,7 @@
 .container {
   position: relative;
   width: 100%;
-  min-height: 50%;
+  min-height: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   overflow:hidden;
@@ -24,7 +24,7 @@
 .bubble-wrap {
   margin: 0 auto;
   width: 500px;
-  height: 100px;
+  height: 500px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform-origin: center center;
