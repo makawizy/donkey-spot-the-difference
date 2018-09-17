@@ -34,7 +34,9 @@ body, html {
 
 	display: none;
 }
-
+.gamemessageend h1 {
+	 text-shadow: 3px 2px red;
+}
 
 .gamemessageend input {
 	/* background-color:#CC00CC; /*Maybe a BG color to match your layout*/
