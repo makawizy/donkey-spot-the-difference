@@ -1,5 +1,5 @@
 var 
-    myText = document.getElementById("bounceTxt").innerHTML,
+    myText = document.getElementById("messageend_h1").innerHTML,
     wrapText = "";
 
 for (var i=0; i<myText.length; i++) {
