@@ -693,7 +693,7 @@ var finddiff = {
 				$('.gamemessage h1').text('Congratulations!!!');
 				$('.gamemessage h3').text('Game Finished,Updates coming soon...');
 				$('.gamemessage h1').show();
-				 var text = new ShuffleText(document.querySelector('#myText'));
+				 var text = new ShuffleText(document.querySelector('#message_h1'));
   				text.start();
 				$('.gamemessage h3').show();
 				$('#nameinput').val(finddiff.mostrecentname);
