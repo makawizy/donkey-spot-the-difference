@@ -21,7 +21,28 @@ body, html {
 	-ms-user-select: none;
 	user-select: none;
 }
+.gamemessageend{
+	position: absolute;
+	left: 0;
+	top: 33.33%;
+	
+	padding-bottom: 32px;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+	background: rgba(0,0,0,.5);
 
+	display: none;
+}
+
+
+.gamemessageend input {
+	/* background-color:#CC00CC; /*Maybe a BG color to match your layout*/
+	border:2px solid #03899c; /*And a border for good luck */
+
+	font-style:normal;
+	font-size: 32px;
+}
 .displaynone {display: none;}
 
 .diffpanel{
