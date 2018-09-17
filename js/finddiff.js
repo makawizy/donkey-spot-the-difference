@@ -691,6 +691,7 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
+				$('.gamemessage').hide();
 				$('.gamemessageend h1').text('Congratulations!!!');
 				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
 				$('.gamemessageend h1').show();
