@@ -125,6 +125,6 @@ document.addEventListener("deviceready", function() {
 	setTimeout(function(){
 		navigator.splashscreen.hide();
 	}, 5000);
-	
+	$('#menuarea').show();
 	finddiff.appinit();
 }, false)
