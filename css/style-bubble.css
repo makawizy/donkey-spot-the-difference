@@ -1,13 +1,13 @@
 
 @-webkit-keyframes move {
-  100% {
+  50% {
     -webkit-transform: translate3d(0, 0, -1000px);
             transform: translate3d(0, 0, -1000px);
   }
 }
 
 @keyframes move {
-  100% {
+  50% {
     -webkit-transform: translate3d(0, 0, -1000px);
             transform: translate3d(0, 0, -1000px);
   }
@@ -24,7 +24,7 @@
 .bubble-wrap {
   margin: 0 auto;
   width: 500px;
-  height: 500px;
+  height: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform-origin: center center;
