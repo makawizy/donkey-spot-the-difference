@@ -91,6 +91,7 @@ var finddiff = {
 		// initialise variables
 		var canvas1 = document.getElementById('myCanvas1');
 		var canvas2 = document.getElementById('myCanvas2');
+		var message_h1 = document.getElementById('message_h1');
 		finddiff.context1 = canvas1.getContext('2d');
 		finddiff.context2 = canvas2.getContext('2d');
 		finddiff.image1 = new Image();
@@ -689,8 +690,11 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h3').text('Congratulations! Game Finished, Updates coming soon...');
-				$('.gamemessage h1').hide();
+				$('.gamemessage h1').text('Congratulations!!!');
+				$('.gamemessage h3').text('Game Finished,Updates coming soon...');
+				$('.gamemessage h1').show();
+				 var text = new ShuffleText(document.querySelector('#myText'));
+  				text.start();
 				$('.gamemessage h3').show();
 				$('#nameinput').val(finddiff.mostrecentname);
 				$('#nameinput').show();
