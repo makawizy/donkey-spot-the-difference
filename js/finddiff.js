@@ -690,18 +690,19 @@ var finddiff = {
 				break;
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
-				$('.gamemessage h1').text('Congratulations!!!');
-				$('.gamemessage h3').text('Game Finished,Updates coming soon...');
-				$('.gamemessage h1').show();
-				 var text = new ShuffleText(document.querySelector('#message_h1'));
+				$('.gamemessageend h1').text('Congratulations!!!');
+				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
+				$('.gamemessageend h1').show();
+				 var text = new ShuffleText(document.querySelector('#messageend_h1'));
   				text.start();
-				$('.gamemessage h3').show();
-				$('#nameinput').val(finddiff.mostrecentname);
-				$('#nameinput').show();
-				$('.gamemessage .diffbutton:first').hide();
-				$('.gamemessage .diffbutton:last').text('Ok');
-				$('.gamemessage').show();
-				$('#nameinput').focus();
+				applyBounce();
+				$('.gamemessageend h3').show();
+				$('#gamemessageendnameinput').val(finddiff.mostrecentname);
+				$('#gamemessageendnameinput').show();
+				$('.gamemessageend .diffbutton:first').hide();
+				$('.gamemessageend .diffbutton:last').text('Ok');
+				$('.gamemessageend').show();
+				$('#gamemessageendnameinput').focus();
 				//platspec.play('lose');
 				finddiff.play('win');
 				//finddiff.ongametimer(); // go immediately, don't wait for timer
