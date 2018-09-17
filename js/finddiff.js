@@ -693,8 +693,8 @@ var finddiff = {
 				$('.gamemessageend h1').text('Congratulations!!!');
 				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
 				$('.gamemessageend h1').show();
-				 var text = new ShuffleText(document.querySelector('#messageend_h1'));
-  				text.start();
+				 //var text = new ShuffleText(document.querySelector('#messageend_h1'));
+  				 //text.start();
 				applyBounce();
 				$('.gamemessageend h3').show();
 				$('#gamemessageendnameinput').val(finddiff.mostrecentname);
@@ -1179,7 +1179,7 @@ var finddiff = {
 					finddiff.ongametimer();
 				}else if(finddiff.state == STATE_GAMECOMPLETED){
 					// highscore enter name
-					finddiff.mostrecentname = $('#nameinput').val();
+					finddiff.mostrecentname = $('#gamemessageend').val();
 					finddiff.hiscoreinsert();
 					// go to game over part
 					finddiff.state = STATE_GAMEOVER;
