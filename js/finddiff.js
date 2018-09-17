@@ -119,7 +119,7 @@ var finddiff = {
 		});
 		
 		// all buttons
-		$('.diffbutton, #hintbtn, #pausebtn').on(finddiff.bIsTouch?'touchstart':'mousedown', function (e) {
+		$('.diffbutton, #hintbtn, #pausebtn,.diffbuttonend').on(finddiff.bIsTouch?'touchstart':'mousedown', function (e) {
 			finddiff.ondiffbuttonpress(this.id);
 		});
 		// debug menu buttons
@@ -692,6 +692,7 @@ var finddiff = {
 			case STATE_GAMECOMPLETED:
 				clearInterval(finddiff.timerId);
 				$('.gamemessage').hide();
+				document.getElementById("messageend_h1").style.color = "03899c";
 				$('.gamemessageend h1').text('Congratulations!!!');
 				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
 				$('.gamemessageend h1').show();
