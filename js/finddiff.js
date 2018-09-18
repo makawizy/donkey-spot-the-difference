@@ -694,7 +694,7 @@ var finddiff = {
 				$('.gamemessage').hide();
 				document.getElementById("messageend_h1").style.color = "03899c";
 				$('.gamemessageend h1').text('Congratulations!!!');
-				$('.gamemessageend h3').text('Game Finished,Updates coming soon...');
+				$('.gamemessageend h3').text('Game Finished, Loading updates...');
 				$('.gamemessageend h1').show();
 				 var text = new ShuffleText(document.querySelector('#messageend_h1'));
   				 text.start();
