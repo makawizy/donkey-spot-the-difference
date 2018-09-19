@@ -184,7 +184,7 @@ var photodata = [
 	},
 	{
 		fileorg: "p17_org.jpg",
-		fileedit: "17.jpg",
+		fileedit: "p17.jpg",
 		location: "Groningen, The Netherlands",
 		date: "2014-03-29",
 		caption: "Flower Stand, Vismarkt",
