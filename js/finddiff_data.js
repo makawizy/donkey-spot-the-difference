@@ -229,5 +229,125 @@ var photodata = [
 		differences: [
 			{x: 127, y: 68, w: 50, h: 40}
 		]
+	},
+	{
+		fileorg: "p21_org.jpg",
+		fileedit: "p21_edit.jpg",
+		location: "Ten Boer, Netherlands",
+		date: "2014-04-12",
+		caption: "De Widde Meuln",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2728485,6.6981217",
+		differences: [
+			{x:  82, y: 75, w: 157, h: 440}
+		]
+	},
+	{
+		fileorg: "p22_org.jpg",
+		fileedit: "p22_edit.jpg",
+		location: "Groningen, Netherlands",
+		date: "2014-04-16",
+		caption: "Pastery shop",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2206246,6.5660408",
+		differences: [
+			{x:  74, y: 100, w: 88, h: 69}
+		]
+	},
+	{
+		fileorg: "p23_org.jpg",
+		fileedit: "p23_edit.jpg",
+		location: "Groningen, Netherlands",
+		date: "2014-04-17",
+		caption: "Various candy",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2332923,6.5380508",
+		differences: [
+			{x: 270, y: 266, w: 71, h: 55}
+		]
+	},
+	{
+		fileorg: "p24_org.jpg",
+		fileedit: "p24_edit.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-04-19",
+		caption: "Vegetable stand",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2174194,6.5653905",
+		differences: [
+			{x: 250, y: 33, w: 83, h: 81}
+		]
+	},
+	{
+		fileorg: "p25_org.jpg",
+		fileedit: "p25_edit.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-04-19",
+		caption: "Pastery shop",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2141927,6.5690424",
+		differences: [
+			{x: 247, y: 333, w: 26, h: 22}
+		]
+	},
+	{
+		fileorg: "p26_org.jpg",
+		fileedit: "p26_edit.jpg",
+		location: "Rome, Italy",
+		date: "2011-09-01",
+		caption: "Piazza Navona street artist",
+		photoby: "Bas de Reuver",
+		geoloc: "41.8994357,12.4729958", // http://mygeoposition.com/
+		differences: [
+			{x: 71, y: 29, w: 52, h: 36}
+		]
+	},
+	{
+		fileorg: "p27_org.jpg",
+		fileedit: "p27_edit.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-03-29",
+		caption: "Flower Stand, Vismarkt",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2172917,6.5642747",
+		differences: [
+			{ x: 279, y: 195, w: 59, h: 55}
+		]
+	},
+	{
+		fileorg: "p28_org.jpg",
+		fileedit: "p28_edit.jpg",
+		location: "Venice, Italy",
+		date: "2006-08-23",
+		caption: "Masks, Venice",
+		photoby: "Bas de Reuver",
+		geoloc: "45.4345465,12.3369840",
+		differences: [
+			{x: 146, y: 255, w: 48, h: 13}
+		]
+	},
+	{
+		fileorg: "p29_org.jpg",
+		fileedit: "p29_edit.jpg",
+		location: "Groningen, Netherlands",
+		date: "2014-04-18",
+		caption: "Scrabble board",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2517467,6.5880505",
+		differences: [
+			{x: 264, y: 155, w: 52, h: 82}
+		]
+	},
+	{
+		fileorg: "p30_org.jpg",
+		fileedit: "p30_edit.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-04-20",
+		caption: "Jigsaw puzzle",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2517467,6.5880505",
+		differences: [
+			{x: 62, y: 7, w: 75, h: 64}
+		]
 	}
 ]
