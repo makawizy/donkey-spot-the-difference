@@ -181,5 +181,53 @@ var photodata = [
 		differences: [
 			{x:234, y: 144, w: 72, h: 102}
 		]
+	},
+	{
+		fileorg: "p17_org.jpg",
+		fileedit: "17.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-03-29",
+		caption: "Flower Stand, Vismarkt",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2172917,6.5642747",
+		differences: [
+			{x: 200, y: 175, w: 36, h: 85}
+		]
+	},
+	{
+		fileorg: "p18_org.jpg",
+		fileedit: "p18_edit.jpg",
+		location: "Venice, Italy",
+		date: "2006-08-23",
+		caption: "Masks, Venice",
+		photoby: "Bas de Reuver",
+		geoloc: "45.4345465,12.3369840",
+		differences: [
+			{x: 228, y: 30, w: 30, h: 170}
+		]
+	},
+	{
+		fileorg: "p19_org.jpg",
+		fileedit: "p19_edit.jpg",
+		location: "Groningen, Netherlands",
+		date: "2014-04-18",
+		caption: "Scrabble board",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2517467,6.5880505",
+		differences: [
+			{x: 34, y: 381, w: 97, h: 88}
+		]
+	},
+	{
+		fileorg: "p20_org.jpg",
+		fileedit: "p20_edit.jpg",
+		location: "Groningen, The Netherlands",
+		date: "2014-04-20",
+		caption: "Jigsaw puzzle",
+		photoby: "Bas de Reuver",
+		geoloc: "53.2517467,6.5880505",
+		differences: [
+			{x: 127, y: 68, w: 50, h: 40}
+		]
 	}
 ]
